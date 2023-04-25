@@ -1,0 +1,16 @@
+{
+    "redis": {
+        "danger": "0",
+        "content": ":1",
+        "port": "6379",
+        "tracktype": "redis",
+        "threshold": "100"
+    },
+    "mysql": {
+        "danger": "0",
+        "content": ":1",
+        "port": "3306",
+        "tracktype": "mysql",
+        "threshold": "100"
+    }
+}

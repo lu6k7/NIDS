@@ -1,0 +1,34 @@
+{
+    "csrf": {
+        "payload": "referer: http:\/\/192.168.1.137",
+        "threshold": "50"
+    },
+    "xss inject": {
+        "payload": "iframe|<script|script>|<img|javascript\\s+:|<a|onclick\\s+=|onerror\\s+=|onmouseover\\s+=|document\\s+\\.|<svg",
+        "threshold": "50"
+    },
+    "sql inject": {
+        "payload": "union.+select|select.+from|updatexml|information_schema|database|extractvalue|into.+outfile|group|where|limit",
+        "threshold": "50"
+    },
+    "trojan upload": {
+        "payload": "shell|passthru|eval|chroot|chgrp|chown|shell_exec|proc_open|proc_get_status|proc_get_statuseval|assert|system|shell_exec|preg_replace|call_user_func|call_user_func_array|file_get_contents|file_put_contents",
+        "threshold": "50"
+    },
+    "file include": {
+        "payload": "php://filter|php://input|phar://|zip://|data://|\\.\\.\\/",
+        "threshold": "50"
+    },
+    "ssrf track": {
+        "payload": "gopher://|dict://|file://|ftp://|sftp://|ssh://|telnet://|imap://|ldap://|data://",
+        "threshold": "50"
+    },
+    "deserialization attack": {
+        "payload": "unserialize\\((.*)\\)|json_decode\\((.*)\\)|o:[1-9]{1,}",
+        "threshold": "50"
+    },
+    "command track": {
+        "payload": "echo(\\+|\\s)|bash(\\+|\\s)|wget(\\+|\\s)|cat(\\+|\\s)|curl(\\+|\\s)|python(\\+|\\s)|system(\\+|\\s)|awk(\\+|\\s)|chgrp(\\+|\\s)|chown(\\+|\\s)|grep(\\+|\\s)|find(\\+|\\s)|sed(\\+|\\s)",
+        "threshold": "50"
+    }
+}
